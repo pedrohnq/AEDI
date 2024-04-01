@@ -45,4 +45,39 @@ func main() {
 	linkedlist.PrintList()
 	linkedlist.Invert()
 	linkedlist.PrintList()
+	fmt.Println("Finished using LinkedList!")
+	fmt.Println("--------------------------")
+
+	fmt.Println("Using DoublyLinkedList!")
+	doublylinkedlist := lists.DoublyLinkedList{}
+	fmt.Println("Adding elements to DoublyLinkedList!")
+	doublylinkedlist.Add(1)
+	doublylinkedlist.Add(2)
+	doublylinkedlist.Add(3)
+	doublylinkedlist.Add(4)
+	doublylinkedlist.Add(5)
+	doublylinkedlist.PrintList()
+
+	fmt.Println("Adding element 10 to index 3 in DoublyLinkedList!")
+	doublylinkedlist.AddOnIndex(10, 3)
+	doublylinkedlist.PrintList()
+
+	fmt.Println("Removing element in index 4 in DoublyLinkedList!")
+	doublylinkedlist.RemoveOnIndex(4)
+	doublylinkedlist.PrintList()
+
+	fmt.Println("Setting element 11 in index 2 in DoublyLinkedList!")
+	doublylinkedlist.Set(11, 2)
+	doublylinkedlist.PrintList()
+
+	fmt.Println("Getting element in index 2 in DoublyLinkedList!")
+	element_in_index_2, _ = doublylinkedlist.Get(2)
+	fmt.Println(element_in_index_2)
+
+	fmt.Println("Inverting DoublyLinkedList!")
+	doublylinkedlist.PrintList()
+	doublylinkedlist.Invert()
+	doublylinkedlist.PrintList()
+	fmt.Println("Finished using DoublyLinkedList!")
+	fmt.Println("--------------------------")
 }
