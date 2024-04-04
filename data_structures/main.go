@@ -1,9 +1,9 @@
 package main
 
 import (
-	"aedi/go/lists"
-	"aedi/go/queues"
-	"aedi/go/stacks"
+	"aedi/data_structures/lists"
+	"aedi/data_structures/queues"
+	"aedi/data_structures/stacks"
 	"fmt"
 )
 

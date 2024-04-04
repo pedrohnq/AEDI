@@ -1,8 +1,6 @@
 package stacks
 
-import (
-	"aedi/go/lists"
-)
+import "aedi/data_structures/lists"
 
 type StackArrayList struct {
 	data lists.ArrayList

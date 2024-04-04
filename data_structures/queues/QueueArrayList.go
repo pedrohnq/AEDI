@@ -1,7 +1,7 @@
 package queues
 
 import (
-	"aedi/go/lists"
+	"aedi/data_structures/lists"
 	"errors"
 )
 
