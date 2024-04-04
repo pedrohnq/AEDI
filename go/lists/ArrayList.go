@@ -18,7 +18,7 @@ func (arraylist *ArrayList) Init(size int) error {
 	}
 }
 
-func (arraylist *ArrayList) double() {
+func (arraylist *ArrayList) Double() {
 	newSize := arraylist.size * 2
 	newValues := make([]int, newSize)
 	for i := 0; i < arraylist.size; i++ {
@@ -29,7 +29,7 @@ func (arraylist *ArrayList) double() {
 
 func (arraylist *ArrayList) Add(value int) error {
 	if arraylist.size == len(arraylist.values) {
-		arraylist.double()
+		arraylist.Double()
 	}
 	arraylist.values[arraylist.size] = value
 	arraylist.size++
@@ -39,7 +39,7 @@ func (arraylist *ArrayList) Add(value int) error {
 func (arraylist *ArrayList) AddOnIndex(value, index int) error {
 	if index >= 0 && index <= arraylist.size {
 		if arraylist.size == len(arraylist.values) {
-			arraylist.double()
+			arraylist.Double()
 		}
 		for i := arraylist.size; i > index; i-- {
 			arraylist.values[i] = arraylist.values[i-1] // shift right
@@ -86,7 +86,7 @@ func (arraylist *ArrayList) Size() int {
 	return arraylist.size
 }
 
-func (arraylist *ArrayList) Invert() {
+func (arraylist *ArrayList) Reverse() {
 	if arraylist.size > 0 {
 		new_list := make([]int, len(arraylist.values))
 		idx := 0

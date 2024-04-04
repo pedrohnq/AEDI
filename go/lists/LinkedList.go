@@ -102,13 +102,16 @@ func (linkedlist *LinkedList) PrintList() {
 	}
 }
 
-func (linkedlist *LinkedList) Invert() {
+func (linkedlist *LinkedList) Reverse() {
 	if linkedlist.size > 0 {
-		next := linkedlist.head
-		for next.next != nil {
-			aux := next.next
-			next.next = nil
-			aux.next = next
+		var prev *Node = nil
+		curr := linkedlist.head
+		var next *Node = nil
+		for curr != nil {
+			next = curr.next
+			curr.next = prev
+			prev = curr
+			curr = next
 		}
 	}
 }

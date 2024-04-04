@@ -122,10 +122,9 @@ func (doublylinkedlist *DoublyLinkedList) PrintList() {
 		print(current.value, " ")
 		current = current.next
 	}
-	println()
 }
 
-func (doublylinkedlist *DoublyLinkedList) Invert() {
+func (doublylinkedlist *DoublyLinkedList) Reverse() {
 	current := doublylinkedlist.head
 	for current != nil {
 		temp := current.next
